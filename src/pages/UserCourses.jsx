@@ -8,7 +8,7 @@ const UserCourses = () => {
     const {user, courses} = useContext(StoreContext)
 
     const buyedCourses = courses.filter(course=> user.courses.includes(course.id)  )
-    const coursesElement = buyedCourses.map(course=> <Course key={course.id} course = {course} />  )
+    const coursesElement = buyedCourses.map(course=> <Course key={course.id} course = {course}  isUserContext={true}/>  )
     return (
         <StyledCourses>
         <h2 className='title'> Twoje wykupione kursy</h2>
