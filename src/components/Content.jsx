@@ -5,6 +5,7 @@ import { StoreContext } from '../store/StoreProvider'
 
 
 import Courses from '../pages/Courses'
+import UserCourses from '../pages/UserCourses'
 
 const Content = () => {
     const {user} = useContext(StoreContext)
@@ -18,7 +19,7 @@ const Content = () => {
         <StyledContent>
             <Switch>
                 <Route exact path='/' render={()=><Courses/>} />
-                { isUserLogged && <Route exact path='/my-courses' render={()=><p>Moje kursy</p>} />}
+                { isUserLogged && <Route exact path='/my-courses' render={()=><UserCourses/>} />}
                 { isAdmin && <Route exact path='/menage-courses' render={()=><p>Zarządzanie kursami</p>} />}
                 <Redirect to='/'/>
             </Switch>
