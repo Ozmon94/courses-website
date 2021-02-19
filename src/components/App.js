@@ -5,6 +5,7 @@ import { HashRouter as Router } from 'react-router-dom'
 import styled from 'styled-components';
 
 import AsideMenu from './AsideMenu';
+import Content from './Content'
 import Header from './Header'
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Router>
         <StyledDiv>
           <AsideMenu/>
+          <Content/>
         </StyledDiv>
        </Router>
     </StoreProvider>
