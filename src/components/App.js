@@ -1,13 +1,15 @@
 import StoreProvider from '../store/StoreProvider'
-
+import GlobalStyle from '../components/globalStyle'
+import Header from './Header'
 
 function App() {
   return (
+    <>
+    <GlobalStyle/>
     <StoreProvider>
-    <div className="App">
-      <h3>elo ziemnia </h3>
-    </div>
+    <Header/>
     </StoreProvider>
+    </>
   );
 }
 
