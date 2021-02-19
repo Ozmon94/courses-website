@@ -16,15 +16,28 @@ const adminMenuComponent = user?.accessLevel === ADMIN_TYPE ? <AdminMenu /> : nu
     
     return (
         <StyledAsideMenu>
+            <div className="nav-wrapper">
             <UserMenu isUserLogged={Boolean(user)}/>
             {adminMenuComponent}
+            </div>
         </StyledAsideMenu>
     )
 }
 
 const StyledAsideMenu = styled.section`
+position: relative;
 width:200px;
-background-color: royalblue;
+
+
+
+.nav-wrapper{
+    position: fixed;
+    top:60px;
+    left:0;
+    bottom:0;
+    width:200px;
+    background-color: royalblue;
+}
 `
 
 export default AsideMenu
