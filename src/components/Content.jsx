@@ -6,6 +6,7 @@ import { StoreContext } from '../store/StoreProvider'
 
 import Courses from '../pages/Courses'
 import UserCourses from '../pages/UserCourses'
+import AdminPanel from '../pages/AdminPanel'
 
 const Content = () => {
     const {user} = useContext(StoreContext)
@@ -20,7 +21,7 @@ const Content = () => {
             <Switch>
                 <Route exact path='/' render={()=><Courses/>} />
                 { isUserLogged && <Route exact path='/my-courses' render={()=><UserCourses/>} />}
-                { isAdmin && <Route exact path='/menage-courses' render={()=><p>Zarządzanie kursami</p>} />}
+                { isAdmin && <Route exact path='/menage-courses' render={()=><AdminPanel/>} />}
                 <Redirect to='/'/>
             </Switch>
         </StyledContent>
